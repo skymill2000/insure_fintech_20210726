@@ -82,7 +82,7 @@ def getLinaData(name, birth, gender):
     resultBtn = driver.find_element_by_xpath(
         '//*[@id="btn_direct_dental_cal"]')
     resultBtn.click()
-    driver.implicitly_wait(6)
+    driver.implicitly_wait(1)
 
     htmlResult = driver.find_element_by_id('mo_amount_span').text
     resultValue = rePlaceData(htmlResult)
