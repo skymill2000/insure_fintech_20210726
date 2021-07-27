@@ -1,6 +1,5 @@
 from selenium import webdriver
 import re
-driver = webdriver.Chrome('./chromedriver')
 
 
 def rePlaceData(value):
@@ -103,7 +102,3 @@ def getLinaData(name, birth, gender):
                                 0].text)
     scrapingResult['contents'] = contentsList
     return scrapingResult
-
-
-print(getAIAData("유관우", "890119", 1))
-print(getLinaData("유관우", "890119", 1))
