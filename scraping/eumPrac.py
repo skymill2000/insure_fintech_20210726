@@ -12,3 +12,7 @@ driver.get("http://www.eum.go.kr/web/am/amMain.jsp")
 
 sidoSelect = Select(driver.find_element_by_xpath('//*[@id="selSido"]'))
 sidoSelect.select_by_visible_text('경기도')
+
+# 실습2 지번으로 조회하는 기능 만들기 !
+#전라남도 / 고흥군 / 고흥읍 / 남계리 / 45 / 1
+# 조회후 공시지가 가지고 오기
