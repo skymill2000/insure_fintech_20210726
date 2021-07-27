@@ -7,6 +7,8 @@ driver.get('https://sports.v.daum.net/v/20210727104826854')
 
 title = driver.find_element_by_xpath('//*[@id="cSub"]/div/h3')
 # xpath 기반으로 요소를 찾아라
-print(title.text)
+subscript = driver.find_element_by_id('harmonyContainer')
+print(subscript.text)
 # //*[@id="cSub"]/div/h3
 # //*[@id="harmonyContainer"]/section/p[1]
+driver.quit()
