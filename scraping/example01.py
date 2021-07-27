@@ -12,3 +12,4 @@ print(subscript.text)
 # //*[@id="cSub"]/div/h3
 # //*[@id="harmonyContainer"]/section/p[1]
 driver.quit()
+
