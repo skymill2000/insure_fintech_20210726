@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import { useState } from "react";
+import ListPage from "./pages/ListPage";
 
 const Element = ({ username }) => {
   return (
@@ -30,6 +31,7 @@ function App() {
       <br />
       <input onChange={inputChange}></input>
       <button onClick={clickButton}>클릭 이벤트의 바인딩</button>
+      <ListPage></ListPage>
     </div>
   );
 }
