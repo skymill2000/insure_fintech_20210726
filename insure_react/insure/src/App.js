@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import { useState } from "react";
 
 const Element = ({ username }) => {
   return (
@@ -9,18 +10,21 @@ const Element = ({ username }) => {
 };
 
 function App() {
-  let userInput = "test";
-
+  // let userInput = "test";
+  const [userInput, setUserInput] = useState("초기값");
   const inputChange = (e) => {
-    const { name, value } = e.target;
+    const { value } = e.target;
     console.log(value);
+    setUserInput(value);
   };
 
   return (
     <div>
       <Header title="테스트 페이지"></Header>
-      <Element username={userInput}></Element>
-      <input value={userInput} onChange={inputChange}></input>
+      <Element username={"test"}></Element>
+      <b> 사용자 입력 값 : {userInput}</b>
+      <br />
+      <input onChange={inputChange}></input>
     </div>
   );
 }
