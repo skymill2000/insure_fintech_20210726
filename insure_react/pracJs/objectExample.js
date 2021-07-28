@@ -12,3 +12,12 @@ let car = {
 console.log(car.name);
 console.log(car.ph);
 car.start();
+
+// json
+// {
+//     name : "",
+//     age : 12,
+// }
+// ----xml----
+// <name>test</name>
+// <age>test</age>
