@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import Header from "./components/Header";
 
 const Element = ({ username }) => {
   return (
@@ -11,6 +11,7 @@ const Element = ({ username }) => {
 function App() {
   return (
     <div>
+      <Header title="테스트 페이지"></Header>
       <Element username="유관우"></Element>
       <Element username="홍길동"></Element>
       <Element username="장비"></Element>
