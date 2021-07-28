@@ -9,13 +9,18 @@ const Element = ({ username }) => {
 };
 
 function App() {
+  let userInput = "test";
+
+  const inputChange = (e) => {
+    const { name, value } = e.target;
+    console.log(value);
+  };
+
   return (
     <div>
       <Header title="테스트 페이지"></Header>
-      <Element username="유관우"></Element>
-      <Element username="홍길동"></Element>
-      <Element username="장비"></Element>
-      <Element username="유비"></Element>
+      <Element username={userInput}></Element>
+      <input value={userInput} onChange={inputChange}></input>
     </div>
   );
 }
