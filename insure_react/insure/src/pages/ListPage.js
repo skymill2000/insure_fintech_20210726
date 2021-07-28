@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ListUser from "../components/ListUser";
+var QRCode = require("qrcode.react");
 
 const ListPage = () => {
   const [array, setarray] = useState([
