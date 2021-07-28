@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListUser from "../components/ListUser";
 
 const ListPage = () => {
   const [array, setarray] = useState([
@@ -17,8 +18,7 @@ const ListPage = () => {
       {array.map((user) => {
         return (
           <>
-            {user.name} 님의 나이는 {user.age} 이고 키는 {user.height}
-            <br />
+            <ListUser user={user}></ListUser>
           </>
         );
       })}
