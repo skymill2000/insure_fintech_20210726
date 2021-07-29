@@ -16,6 +16,7 @@ const HospitalList = () => {
           "uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ==",
         pageNo: "1",
         numOfRows: "10",
+        clCd: "31",
         yadmNm: searchInput,
       },
     };
