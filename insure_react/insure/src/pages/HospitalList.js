@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Header from "../components/Header";
+import HospitalListItem from "../components/hospital/HospitalCardItem";
 
 const HospitalList = () => {
   const [searchInput, setSearchInput] = useState("");
+  const [hospitalList, setHospitalList] = useState([]);
   const getHospitalList = () => {
     const option = {
       method: "GET",
@@ -19,6 +21,7 @@ const HospitalList = () => {
     };
     axios(option).then((response) => {
       console.log(response.data);
+      setHospitalList(response.data.response.body.items.item);
     });
   };
   const handleChange = (e) => {
@@ -30,6 +33,18 @@ const HospitalList = () => {
       <Header title="병원검색"></Header>
       <input onChange={handleChange}></input>
       <button onClick={getHospitalList}>병원 조회하기</button>
+      {hospitalList.map(({ addr, clCd, clCdNm, yadmNm, ykiho }) => {
+        return (
+          <HospitalListItem
+            key={ykiho}
+            addr={addr}
+            clCd={clCd}
+            clCdNm={clCdNm}
+            yadmNm={yadmNm}
+            ykiho={ykiho}
+          ></HospitalListItem>
+        );
+      })}
     </div>
   );
 };
