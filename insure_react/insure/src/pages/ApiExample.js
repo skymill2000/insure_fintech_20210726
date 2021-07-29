@@ -8,7 +8,7 @@ const ApiExample = () => {
     setsearchInput(value);
   };
   const getPharmacyData = () => {
-    const url = `http://apis.data.go.kr/B551182/pharmacyInfoService/getParmacyBasisList?ServiceKey=uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D&pageNo=1&numOfRows=10&emdongNm=${searchInput}`;
+    const url = `/B551182/pharmacyInfoService/getParmacyBasisList?ServiceKey=uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D&pageNo=1&numOfRows=10&emdongNm=${searchInput}`;
     axios.get(url).then((response) => {
       console.log(response.data);
     });
