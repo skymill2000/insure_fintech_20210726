@@ -12,10 +12,15 @@ const NewsPage = () => {
       console.log(response);
     });
   };
+  const handleSearchInput = (e) => {
+    const { value } = e.target;
+    setsearchInput(value);
+  };
 
   return (
     <div>
       <NewsHeader></NewsHeader>
+      <input onChange={handleSearchInput}></input>
       <button onClick={getData}>검색</button>
       <NewsList></NewsList>
     </div>
