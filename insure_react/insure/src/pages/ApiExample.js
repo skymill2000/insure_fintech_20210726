@@ -8,8 +8,19 @@ const ApiExample = () => {
     setsearchInput(value);
   };
   const getPharmacyData = () => {
-    const url = `/B551182/pharmacyInfoService/getParmacyBasisList?ServiceKey=uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D&pageNo=1&numOfRows=10&emdongNm=${searchInput}`;
-    axios.get(url).then((response) => {
+    const option = {
+      method: "GET",
+      url: "/B551182/pharmacyInfoService/getParmacyBasisList",
+      headers: {},
+      params: {
+        ServiceKey:
+          "uiu3ZzNzDB04UbxOtOL1atH04WOtxB5WSKkPbaCASVHbwgcsIPwHA5Qp6xOmSe6fzCnUVifZcfTXDkgNegv4qQ%3D%3D",
+        pageNo: "1",
+        numOfRows: "10",
+        emdongNm: searchInput,
+      },
+    };
+    axios(option).then((response) => {
       console.log(response.data);
     });
   };
