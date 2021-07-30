@@ -81,9 +81,9 @@ def getLinaData(name, birth, gender):
     resultBtn = driver.find_element_by_xpath(
         '//*[@id="btn_direct_dental_cal"]')
     resultBtn.click()
-    driver.implicitly_wait(1)
+    driver.implicitly_wait(3)
 
-    htmlResult = driver.find_element_by_id('mo_amount_span').text
+    htmlResult = driver.find_element_by_xpath('//*[@id="contents"]/div[2]/div[2]/div[2]/div/table/tbody[1]/tr[1]/td[2]/strong').text
     resultValue = rePlaceData(htmlResult)
     scrapingResult['price'] = resultValue
     driver.implicitly_wait(2)
