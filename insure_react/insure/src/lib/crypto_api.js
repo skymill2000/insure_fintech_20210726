@@ -3,7 +3,7 @@ const { createCipheriv, createHash } = require("crypto");
 const makeHashValue = () => {
   const hash = createHash("sha256");
   const input = "test.js";
-  console.log(hash.update(input).digest("base64"));
+  return hash.update(input).digest("base64");
 };
 
 const makeAES = (plainText) => {

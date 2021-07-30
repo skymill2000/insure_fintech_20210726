@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import ApiExample from "./pages/ApiExample";
 import AxiosTest from "./pages/AxiosTest";
+import Carinfo from "./pages/Carinfo";
 import CipherTest from "./pages/CipherTest";
 import HospitalDetail from "./pages/HospitalDetail";
 import HospitalList from "./pages/HospitalList";
@@ -36,6 +37,9 @@ function App() {
         </Route>
         <Route path="/enTest" exact>
           <CipherTest />
+        </Route>
+        <Route path="/carInfo" exact>
+          <Carinfo />
         </Route>
       </Switch>
     </Router>
