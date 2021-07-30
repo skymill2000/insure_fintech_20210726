@@ -7,6 +7,7 @@ import Carinfo from "./pages/Carinfo";
 import CipherTest from "./pages/CipherTest";
 import HospitalDetail from "./pages/HospitalDetail";
 import HospitalList from "./pages/HospitalList";
+import InsurePage from "./pages/InsurePage";
 import ListPage from "./pages/ListPage";
 import NewsPage from "./pages/NewsPage";
 
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route path="/carInfo" exact>
           <Carinfo />
+        </Route>
+        <Route path="/insureInfo" exact>
+          <InsurePage />
         </Route>
       </Switch>
     </Router>
