@@ -8,12 +8,12 @@ const Carinfo = () => {
       method: "POST",
       url: "/assist/common/carzen/CarAllInfoInquiry",
       headers: {
-        Authorization: "Token 332460548c3348109095d32b82710b518cbb318e",
+        Authorization: "Token {사용자 발급 토큰}",
         "Content-Type": "application/json;charset=UTF-8",
       },
       data: {
-        REGINUMBER: "23버2349",
-        OWNERNAME: "곽영애",
+        REGINUMBER: "{여러분들 자동차번호}",
+        OWNERNAME: "{소유주}",
       },
     };
     axios(option).then((response) => {
