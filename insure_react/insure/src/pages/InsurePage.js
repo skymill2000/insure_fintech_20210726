@@ -35,9 +35,11 @@ const InsurePage = () => {
   return (
     <div>
       아이디입력 : <input name="id" onChange={handleInputChange}></input> <br />
-      패스워드 입력 : <input name="pwd" onChange={handleInputChange}></input>
+      패스워드 입력 :{" "}
+      <input type="password" name="pwd" onChange={handleInputChange}></input>
       <br />
       <button onClick={getInsureInfo}>보험 조회하기</button>
+      {result !== undefined && <>{result.data.ERRMSG}</>}
     </div>
   );
 };
